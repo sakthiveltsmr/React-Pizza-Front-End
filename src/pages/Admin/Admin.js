@@ -3,16 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import Addpizza from "./Addpizza";
-import Editpizza from "./Editpizza";
-import Orderslist from "./Orderlist";
-import Pizzaslist from "./Pizzalist";
-import Userslist from "./Userlist";
-
 export default function Admin() {
   const userstate = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userstate;
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(() => {
     if (!currentUser.isAdmin) {
@@ -48,10 +42,6 @@ export default function Admin() {
               </Link>
             </li>
           </ul>
-          {/* <Routes> */}
-          {/* <Route path="/admin" element={<Userslist />} exact /> */}
-
-          {/* </Routes> */}
         </div>
       </div>
     </div>

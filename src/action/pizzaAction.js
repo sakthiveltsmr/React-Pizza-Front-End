@@ -33,9 +33,9 @@ export const filterPizzas = (searchkey, category) => async (dispatch) => {
       pizza.name.toLowerCase().includes(searchkey)
     );
 
-    if (category != "all") {
+    if (category !== "all") {
       filteredPizzas = response.data.filter(
-        (pizza) => pizza.category.toLowerCase() == category
+        (pizza) => pizza.category.toLowerCase() === category
       );
     }
     dispatch({ type: "GET_PIZZAS_SUCCESS", payload: filteredPizzas });
