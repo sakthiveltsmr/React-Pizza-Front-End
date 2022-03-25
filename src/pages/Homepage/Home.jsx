@@ -24,9 +24,9 @@ function Home() {
         ) : error ? (
           <h1>something went wrong</h1>
         ) : (
-          pizzas.map((p) => {
+          pizzas.map((p, i) => {
             return (
-              <div className="col-md-3 p-3 m-3" key={p._id}>
+              <div className="col-md-3 p-3 m-3 key={p._id}">
                 <div>
                   <Pizza pizza={p} />
                 </div>
