@@ -15,7 +15,8 @@ export default function Register() {
   const dispatch = useDispatch();
   function register() {
     if (email.length === 0 || email.length < 4) {
-      setemailError("Invalid Email");
+      const res = setemailError("Invalid Email");
+      console.log(res);
     }
     if (password !== cpassword) {
       alert("passwords not matched");
@@ -29,6 +30,7 @@ export default function Register() {
       dispatch(registerUser(user));
     }
   }
+  console.log(error);
 
   return (
     <div className="register">
@@ -39,7 +41,7 @@ export default function Register() {
         >
           {loading && <Loading />}
           {success && <Success success="User Registered Successfully" />}
-          {error && <Error error="Email already registred" />}
+          {error && <Error error="fill all the required fields" />}
 
           <h2 className="text-center m-2" style={{ fontSize: "35px" }}>
             Register
@@ -65,6 +67,7 @@ export default function Register() {
               }}
               required
             />
+
             <input
               type="password"
               placeholder="password"
