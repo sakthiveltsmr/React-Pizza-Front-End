@@ -8,11 +8,15 @@ export default function Register() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [emailError, setemailError] = useState("");
   const [cpassword, setcpassword] = useState("");
   const registerstate = useSelector((state) => state.registerUserReducer);
   const { error, loading, success } = registerstate;
   const dispatch = useDispatch();
   function register() {
+    if (email.length === 0 || email.length < 4) {
+      setemailError("Invalid Email");
+    }
     if (password !== cpassword) {
       alert("passwords not matched");
     } else {
