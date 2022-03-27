@@ -11,6 +11,7 @@ export default function Order() {
   const dispatch = useDispatch();
   const orderstate = useSelector((state) => state.getUserOrdersReducer);
   const { orders, error, loading } = orderstate;
+  console.log(orders);
 
   useEffect(() => {
     dispatch(getUserOrders());
