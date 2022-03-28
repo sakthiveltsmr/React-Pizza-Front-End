@@ -15,6 +15,7 @@ export default function Order() {
 
   useEffect(() => {
     dispatch(getUserOrders());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

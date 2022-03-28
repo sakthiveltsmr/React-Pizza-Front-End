@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 export default function Admin() {
@@ -12,6 +12,7 @@ export default function Admin() {
     if (!currentUser.isAdmin) {
       window.location.href = "/";
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
