@@ -37,12 +37,12 @@
 <hr>
 <h3>Demo Login</h3>
 <p>User login</p>
-<p>Username: abc@gmail.com<p>
-<p>Password: 12345</p>
+<p>Username: sakthivel@gmail.com<p>
+<p>Password: sakthi123</p>
 <br>
 <p>Admin login</p>
-<p>Username: admin@xyz.com<p>
-<p>Password: admin321</p>
+<p>Username: sakthi@gmail.com <p>
+<p>Password: sakthi123</p>
 <hr>
 <h3>Demo card</h3>
 <p>Card Number: 4242 4242 4242 4242</p>
