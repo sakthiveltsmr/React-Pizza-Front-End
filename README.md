@@ -33,6 +33,10 @@
    Seperate Admin and User Dashboard
 </li>
 <hr>
+## Screenshort
+
+![pizza beast](../Pizza-Front-End-using-React-main/src/image/screen.png)
+
 <h3><strong>Live URL: <a href="https://awesome-pizza.herokuapp.com/" target="_blank">https://awesome-pizza.herokuapp.com/</a></h3>
 <hr>
 <h3>Demo Login</h3>
