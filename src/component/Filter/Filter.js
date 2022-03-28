@@ -5,6 +5,7 @@ export default function Filter() {
   const dispatch = useDispatch();
   const [searchkey, setsearchkey] = useState("");
   const [category, setcategory] = useState("all");
+
   return (
     <div className="container">
       <div className="row justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
