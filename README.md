@@ -35,7 +35,7 @@
 <hr>
 ## Screenshort
 
-![pizza beast](../Pizza-Front-End-using-React-main/src/image/screen.png)
+![pizza beast](./src/image/screen.png)
 
 <h3><strong>Live URL: <a href="https://awesome-pizza.herokuapp.com/" target="_blank">https://awesome-pizza.herokuapp.com/</a></h3>
 <hr>
