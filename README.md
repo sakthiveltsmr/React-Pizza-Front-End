@@ -37,7 +37,7 @@
 
 ![pizza beast](./src/image/screen.png)
 
-<h3><strong>Live URL: <a href="https://awesome-pizza.herokuapp.com/" target="_blank">https://awesome-pizza.herokuapp.com/</a></h3>
+<h3><strong>Live URL: <a href="https://sakthi-pizza-beast.netlify.app/" target="_blank">https://sakthi-pizza-beast.netlify.app/</a></h3>
 <hr>
 <h3>Demo Login</h3>
 <p>User login</p>
