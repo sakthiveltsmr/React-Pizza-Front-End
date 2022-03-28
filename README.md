@@ -37,11 +37,11 @@
 <hr>
 <h3>Demo Login</h3>
 <p>User login</p>
-<p>Username: sakthivel@gmail.com<p>
+<p>Username: sakthi@gmail.com<p>
 <p>Password: sakthi123</p>
 <br>
 <p>Admin login</p>
-<p>Username: sakthi@gmail.com <p>
+<p>Username: sakthivel@gmail.com <p>
 <p>Password: sakthi123</p>
 <hr>
 <h3>Demo card</h3>
