@@ -10,6 +10,7 @@ export default function Orderslist() {
   const { loading, error, orders } = getordersstate;
   useEffect(() => {
     dispatch(getAllOrders());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>

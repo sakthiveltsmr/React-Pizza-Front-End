@@ -11,6 +11,7 @@ export default function Pizzalist() {
   const { pizzas, error, loading } = pizzasstate;
   useEffect(() => {
     dispatch(getAllPizzas());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>

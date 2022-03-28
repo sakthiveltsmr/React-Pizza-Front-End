@@ -37,6 +37,7 @@ export default function Editpizza() {
     } else {
       dispatch(getPizzaById(pizzaid));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pizza, dispatch]);
 
   function formHandler(e) {

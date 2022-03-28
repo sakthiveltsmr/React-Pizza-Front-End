@@ -20,9 +20,7 @@ export default function Cartscreen() {
 
   if (success) {
     localStorage.removeItem("cartItems");
-    cartItems.map((item) => {
-      dispatch(deleteFromCart(item));
-    });
+    cartItems.map((item) => dispatch(deleteFromCart(item)));
     setTimeout(() => {
       setRedirect(true);
     }, 2000);
