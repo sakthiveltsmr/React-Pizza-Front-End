@@ -37,6 +37,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
 
 export const getAllOrders = () => async (dispatch, getState) => {
   const currentUser = getState().loginUserReducer.currentUser;
+  console.log(currentUser);
   dispatch({ type: "GET_ALLORDERS_REQUEST" });
 
   try {
