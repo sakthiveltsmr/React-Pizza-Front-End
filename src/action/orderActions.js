@@ -61,7 +61,7 @@ export const deliverOrder = (orderid) => async (dispatch) => {
     );
     console.log(response);
     alert("Order Delivered");
-    const orders = await axios.get("/api/orders/getallorders");
+    const orders = await axios.get("https://sakthi-pizzas-api.herokuapp.com/api/orders/getallorders");
     dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: orders.data });
   } catch (error) {
     console.log(error);
