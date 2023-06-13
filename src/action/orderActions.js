@@ -5,8 +5,12 @@ export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
   const cartItems = getState().cartReducer.cartItems;
 
   try {
+//     const response = await axios.post(
+//       "https://sakthi-pizzas-api.herokuapp.com/api/orders/placeorder",
+//       { token, subtotal, currentUser, cartItems }
+//     );
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/orders/placeorder",
+      "https://pizza-zdfk.onrender.com/api/orders/placeorder",
       { token, subtotal, currentUser, cartItems }
     );
     dispatch({ type: "PLACE_ORDER_SUCCESS" });
@@ -22,11 +26,14 @@ export const getUserOrders = () => async (dispatch, getState) => {
   dispatch({ type: "GET_USER_ORDERS_REQUEST" });
 
   try {
-    const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/orders/getuserorders",
+//     const response = await axios.post(
+//       "https://sakthi-pizzas-api.herokuapp.com/api/orders/getuserorders",
+//       { userid: currentUser._id }
+//     );
+      const response = await axios.post(
+      "https://pizza-zdfk.onrender.com/api/orders/getuserorders",
       { userid: currentUser._id }
     );
-
     console.log(response);
 
     dispatch({ type: "GET_USER_ORDERS_SUCCESS", payload: response.data });
@@ -42,7 +49,7 @@ export const getAllOrders = () => async (dispatch, getState) => {
 
   try {
     const response = await axios.get(
-      "https://sakthi-pizzas-api.herokuapp.com/api/orders/getallorders"
+      "https://pizza-zdfk.onrender.com/api/orders/getallorders"
     );
 
     console.log(response);
@@ -56,12 +63,12 @@ export const getAllOrders = () => async (dispatch, getState) => {
 export const deliverOrder = (orderid) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/orders/deliverorder",
+      "https://pizza-zdfk.onrender.com/api/orders/deliverorder",
       { orderid }
     );
     console.log(response);
     alert("Order Delivered");
-    const orders = await axios.get("https://sakthi-pizzas-api.herokuapp.com/api/orders/getallorders");
+    const orders = await axios.get("https://pizza-zdfk.onrender.com/api/orders/getallorders");
     dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: orders.data });
   } catch (error) {
     console.log(error);
