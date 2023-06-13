@@ -4,7 +4,7 @@ export const registerUser = (user) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/users/register",
+      "https://pizza-zdfk.onrender.com/api/users/register",
       user
     );
     console.log(response);
@@ -19,7 +19,7 @@ export const loginUser = (user) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/users/login",
+      "https://pizza-zdfk.onrender.com/api/users/login",
       user
     );
     console.log(response);
@@ -41,7 +41,7 @@ export const getAllUsers = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://sakthi-pizzas-api.herokuapp.com/api/users/getallusers"
+      "https://pizza-zdfk.onrender.com/api/users/getallusers"
     );
     console.log(response);
     dispatch({ type: "GET_USERS_SUCCESS", payload: response.data });
@@ -53,7 +53,7 @@ export const getAllUsers = () => async (dispatch) => {
 export const deleteUser = (userid) => async (dispatch) => {
   try {
     await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/users/deleteuser",
+      "https://pizza-zdfk.onrender.com/api/users/deleteuser",
       { userid }
     );
     alert("User deleted successfully");
