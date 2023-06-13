@@ -4,7 +4,7 @@ export const getAllPizzas = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/getallpizzas"
+      "https://pizza-zdfk.onrender.com/api/pizzas/getallpizzas"
     );
     console.log(response);
     dispatch({ type: "GET_PIZZAS_SUCCESS", payload: response.data });
@@ -18,7 +18,7 @@ export const getPizzaById = (pizzaid) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/getpizzabyid",
+      "https://pizza-zdfk.onrender.com/api/pizzas/getpizzabyid",
       { pizzaid }
     );
     console.log(response);
@@ -34,7 +34,7 @@ export const filterPizzas = (searchkey, category) => async (dispatch) => {
   try {
     var filteredPizzas;
     const response = await axios.get(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/getallpizzas"
+      "https://pizza-zdfk.onrender.com/api/pizzas/getallpizzas"
     );
     filteredPizzas = response.data.filter((pizza) =>
       pizza.name.toLowerCase().includes(searchkey)
@@ -55,7 +55,7 @@ export const addPizza = (pizza) => async (dispatch) => {
   dispatch({ type: "ADD_PIZZA_REQUEST" });
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/addpizza",
+      "https://pizza-zdfk.onrender.com/api/pizzas/addpizza",
       { pizza }
     );
     console.log(response);
@@ -69,7 +69,7 @@ export const editPizza = (editedpizza) => async (dispatch) => {
   dispatch({ type: "EDIT_PIZZA_REQUEST" });
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/editpizza",
+      "https://pizza-zdfk.onrender.com/api/pizzas/editpizza",
       { editedpizza }
     );
     console.log(response);
@@ -83,7 +83,7 @@ export const editPizza = (editedpizza) => async (dispatch) => {
 export const deletePizza = (pizzaid) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "https://sakthi-pizzas-api.herokuapp.com/api/pizzas/deletepizza",
+      "https://pizza-zdfk.onrender.com/api/pizzas/deletepizza",
       { pizzaid }
     );
     alert("Pizza Deleted Successfully");
